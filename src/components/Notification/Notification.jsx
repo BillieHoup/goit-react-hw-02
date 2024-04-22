@@ -1,3 +1,7 @@
-const Notification = ({ message }) => <p>{message}</p>;
-
-export default Notification;
+export default function Notification() {
+  return (
+    <div>
+      <p>No feedback yet</p>
+    </div>
+  );
+}

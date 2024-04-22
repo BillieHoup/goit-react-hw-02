@@ -1,0 +1,12 @@
+.options {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 12px 45px;
+  border-radius: 7px;
+  background-color: #d73333;
+  color: #fff;
+  border: 0;
+}

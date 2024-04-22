@@ -1,15 +1,28 @@
 import css from './Feedback.module.css';
 
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
-  <div className={css.feedback}>
-    {options.map(option => (
-      <button
-        key={option}
-        className={css.button}
-        onClick={() => onLeaveFeedback(option)}
-      >
-        {option.charAt(0).toUpperCase() + option.slice(1)}
-      </button>
-    ))}
-  </div>
-);
+export default function Feedback({
+  count: { good, neutral, bad },
+  total,
+  percent,
+}) {
+  return (
+    <div>
+      <p className={css.stat}>
+        Good: <span>{good}</span>
+      </p>
+      <p className={css.stat}>
+        Neutral: <span>{neutral}</span>
+      </p>
+      <p className={css.stat}>
+        Bad: <span>{bad}</span>
+      </p>
+      <div className={css.divider}></div>
+      <p className={css.stat}>
+        Total: <span>{total}</span>
+      </p>
+      <p className={css.stat}>
+        Positive: <span>{percent}%</span>
+      </p>
+    </div>
+  );
+}
